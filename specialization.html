@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas de Atuação - Valderson Mendes Advocacia</title>
+    <link rel="icon" type="image/x-icon" href="./src/img/icon.png">
+    <link rel="stylesheet" href="./src/style/reset.css">
+    <link rel="stylesheet" href="./src/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <style>
+        /* Reset e estilos básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #072541;
+            line-height: 1.6;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        /* Header */
+        header {
+            background-color: #072541;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            height: 80px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        .nav-link:hover {
+            color: #077a77;
+            background-color: rgba(7, 122, 119, 0.1);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .hamburger i {
+            font-size: 1.8rem;
+        }
+
+        .hamburger:hover {
+            transform: scale(1.1);
+        }
+
+        /* Banner da página */
+        .page-banner {
+            background-image: linear-gradient(rgba(7, 37, 65, 0.7), rgba(7, 37, 65, 0.7)), url('./src/img/martelo-e-balanca-da-justica-na-sala-tribunal.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 25px;
+            color: white;
+            padding: 20px;
+            margin-top: 80px;
+        }
+
+        .page-banner h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            max-width: 800px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            line-height: 1.2;
+        }
+
+        .page-banner p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            line-height: 1.5;
+        }
+
+        /* Seção Áreas de Atuação */
+        .container-performance {
+            padding: 100px 20px;
+            background-color: white;
+            color: black;
+            text-align: center;
+        }
+
+        .container-performance h2 {
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+            color: #072541;
+            position: relative;
+        }
+
+        .container-performance h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #077a77;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .performance-area {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .area {
+            width: 350px;
+            border: 2px solid #077a77;
+            border-radius: 10px;
+            padding: 35px 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            transition: all 0.3s ease;
+            background-color: white;
+        }
+
+        .area:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .area .icon {
+            width: 70px;
+            height: 70px;
+            font-size: 2.5rem;
+            color: #077a77;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f8f8;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .area:hover .icon {
+            background-color: #077a77;
+            color: white;
+            transform: rotate(10deg);
+        }
+
+        .area h3 {
+            font-size: 1.6rem;
+            color: #077a77;
+            margin-bottom: 10px;
+        }
+
+        .area ul {
+            text-align: left;
+            margin: 10px 0 0 20px;
+            flex-grow: 1;
+        }
+
+        .area li {
+            margin-bottom: 12px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .area li:before {
+            content: "•";
+            color: #077a77;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .area button {
+            background-color: #077a77;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            margin-top: auto;
+            font-size: 1rem;
+        }
+
+        .area button:hover {
+            background-color: #065f5f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(7, 122, 119, 0.3);
+        }
+
+        /* Seção de Contato */
+        .contact-form-section {
+            background: linear-gradient(135deg, #072541 0%, #077a77 100%);
+            padding: 80px 20px;
+            color: white;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .contact-info>p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .contact-method:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .contact-method i {
+            font-size: 1.5rem;
+            color: #077a77;
+            background: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-method h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .contact-method p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .whatsapp-link {
+            color: #25D366;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .whatsapp-link:hover {
+            color: #128C7E;
+        }
+
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h3 {
+            font-size: 1.8rem;
+            color: #072541;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #072541;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #077a77;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(7, 122, 119, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+            font-family: inherit;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: #25D366;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .submit-btn:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #072541;
+            color: white;
+            padding: 60px 20px 30px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-item i {
+            color: #077a77;
+            font-size: 1.2rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 25px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Responsividade */
+        @media (max-width: 968px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-info h2 {
+                font-size: 2.2rem;
+            }
+
+            .form-container {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: #072541;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                padding: 30px 0;
+                gap: 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-item {
+                margin: 15px 0;
+            }
+
+            .page-banner h1 {
+                font-size: 2.5rem;
+            }
+
+            .page-banner p {
+                font-size: 1.1rem;
+            }
+
+            .performance-area {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .area {
+                width: 90%;
+                max-width: 400px;
+            }
+
+            .contact-form-section {
+                padding: 60px 15px;
+            }
+
+            .contact-method {
+                padding: 20px;
+            }
+
+            .contact-method i {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+
+            .submit-btn {
+                padding: 16px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-banner h1 {
+                font-size: 2.2rem;
+            }
+
+            .page-banner p {
+                font-size: 1rem;
+            }
+
+            .area ul {
+                margin-left: 10px;
+            }
+
+            .contact-info h2 {
+                font-size: 2rem;
+            }
+
+            .form-container {
+                padding: 25px 20px;
+            }
+
+            .contact-form h3 {
+                font-size: 1.5rem;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="./src/img/icon.png" alt="Advocacia Expert - Logo">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="areas-atuacao.html" class="nav-link">Áreas de Atuação</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#diferenciais" class="nav-link">Diferenciais</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#sobre" class="nav-link">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contactForm" class="nav-link">Contato</a>
+                </li>
+            </ul>
+            <button class="hamburger" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner container-slider" aria-label="Página de Áreas de Atuação">
+            <h1>Áreas de Atuação</h1>
+            <p>Conheça todas as especialidades do nosso escritório e como podemos proteger seus direitos</p>
+            <button><a href="#contato">Fale com um Advogado Agora</a></button>
+
+        </section>
+
+        <section id="areas-atuacao" class="container-performance" aria-label="Áreas de atuação">
+            <h2>Nossas Especialidades</h2>
+            <div class="performance-area">
+                <div class="area">
+                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-cart-shopping"></i></div>
+                    <h3>Direito do Consumidor</h3>
+                    <ul>
+                        <li class="list-area">Cobranças indevidas – Revisamos sua fatura, contestamos a cobrança e
+                            garantimos restituição.</li>
+                        <li class="list-area">Juros abusivos – Identificamos taxas ilegais e renegociamos dívidas.</li>
+                        <li class="list-area">Produtos com defeito / garantia não cumprida – Garantimos troca, reparo ou
+                            indenização.</li>
+                        <li class="list-area">Publicidade enganosa – Corrigimos problemas de ofertas falsas ou
+                            enganosas.</li>
+                    </ul>
+                </div>
+                <div class="area">
+                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></div>
+                    <h3>Direito Previdenciário</h3>
+                    <ul>
+                        <li class="list-area">Aposentadoria por tempo de contribuição / idade / especial – Orientamos
+                            para garantir o benefício correto.
+                        </li>
+                        <li class="list-area">Revisão de benefícios – Corrigimos erros e aumentamos valores do
+                            benefício.</li>
+                        <li class="list-area">Auxílio-doença / auxílio-acidente – Garantimos renda durante afastamento.
+                        </li>
+                        <li class="list-area">Pensão por morte / benefícios familiares – Protegemos direitos de
+                            dependentes e herdeiros.</li>
+                    </ul>
+                </div>
+                <div class="area">
+                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Direito Penal</h3>
+                    <ul>
+                        <li class="list-area">Defesa criminal – Atuamos da investigação ao julgamento, garantindo
+                            estratégias jurídicas eficazes.</li>
+                        <li class="list-area">Medidas cautelares e liberdade provisória – Minimização de impactos
+                            durante o processo.</li>
+                        <li class="list-area">Crimes contra patrimônio, consumo e violência – Defesa personalizada,
+                            buscando absolvição ou redução de penas.</li>
+                        <li class="list-area">Crimes cibernéticos – Defesa em fraudes online, golpes e invasões.</li>
+                    </ul>
+                </div>
+                <div class="area">
+                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-gavel"></i></div>
+                    <h3>Direito Civil</h3>
+                    <ul>
+                        <li class="list-area">Contratos – Elaboração, revisão e análise de contratos em geral.</li>
+                        <li class="list-area">Responsabilidade civil – Indenizações por danos morais e materiais.</li>
+                        <li class="list-area">Direito de família – Divórcio, guarda, pensão alimentícia e inventário.
+                        </li>
+                        <li class="list-area">Direito das sucessões – Planejamento sucessório e inventário.</li>
+                    </ul>
+                </div>
+                <div class="area">
+                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-building"></i></div>
+                    <h3>Direito Empresarial</h3>
+                    <ul>
+                        <li class="list-area">Constituição de empresas – Assessoria na abertura e regularização de
+                            empresas.</li>
+                        <li class="list-area">Contratos empresariais – Elaboração e análise de contratos comerciais.
+                        </li>
+                        <li class="list-area">Recuperação judicial e extrajudicial – Reestruturação de empresas em
+                            dificuldades financeiras.</li>
+                        <li class="list-area">Direito societário – Fusões, aquisições e reorganização societária.</li>
+                    </ul>
+                </div>
+                <div class="area">
+                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-landmark"></i></div>
+                    <h3>Direito Tributário</h3>
+                    <ul>
+                        <li class="list-area">Planejamento tributário – Estratégias para redução legal da carga
+                            tributária.</li>
+                        <li class="list-area">Consultoria fiscal – Análise e adequação de obrigações tributárias.</li>
+                        <li class="list-area">Defesa em execuções fiscais – Atuação em processos de cobrança de
+                            tributos.</li>
+                        <li class="list-area">Recuperação de créditos tributários – Restituição e compensação de
+                            tributos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Entre em Contato</h2>
+                    <p>Estamos aqui para ajudar. Entre em contato conosco através do formulário ou pelos nossos canais
+                        diretos.</p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h3>WhatsApp</h3>
+                                <p>(71) 99283-2116</p>
+                                <a href="https://wa.me/5571992832116?text=Olá! Gostaria de agendar uma consulta."
+                                    class="whatsapp-link" target="_blank">
+                                    Enviar mensagem
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Telefone</h3>
+                                <p>(71) 99283-2116</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <form id="contactForm" class="contact-form">
+                        <h3>Fale com um especialista</h3>
+
+                        <div class="form-group">
+                            <label for="name">Nome Completo *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefone/WhatsApp *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Assunto  *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Descreva brevemente seu caso..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fab fa-whatsapp"></i>
+                            Enviar pelo WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./src/img/icon.png" alt="Advocacia Expert">
+                        <h3>Valderson Mendes Advocacia</h3>
+                    </div>
+                    <p class="footer-description">
+                        Protegendo seus direitos com excelência, ética e dedicação. Sua solução jurídica de confiança.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/5571992832116" class="social-link" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="areas-atuacao.html">Áreas de Atuação</a></li>
+                        <li><a href="index.html#diferenciais">Diferenciais</a></li>
+                        <li><a href="index.html#sobre">Sobre Nós</a></li>
+                        <li><a href="#contactForm">Contato</a></li>
+                        <li><a href="#" class="whatsapp-link">WhatsApp Direto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Áreas de Atuação</h4>
+                    <ul class="footer-links">
+                        <li><a href="areas-atuacao.html#consumidor">Direito do Consumidor</a></li>
+                        <li><a href="areas-atuacao.html#previdenciario">Direito Previdenciário</a></li>
+                        <li><a href="areas-atuacao.html#penal">Direito Penal</a></li>
+                        <li><a href="areas-atuacao.html#civil">Direito Civil</a></li>
+                        <li><a href="areas-atuacao.html#empresarial">Direito Empresarial</a></li>
+                        <li><a href="areas-atuacao.html#tributario">Direito Tributário</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contato & Localização</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span>Salvador, Bahia</span>
+                                <small>Atendimento em toda a região</small>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span>(71) 99283-2116</span>
+                                <small>Segunda a Sexta, 8h-18h</small>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span>contato@advocaciaexpert.com</span>
+                                <small>Respondemos em 24h</small>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <span>Horário de Atendimento</span>
+                                <small>Segunda a Sexta: 8h-18h</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2025 Valderson Mendes Advocacia. Todos os direitos reservados.</p>
+                    </div>
+                    <div class="footer-legal">
+                        <a href="#">Política de Privacidade</a>
+                        <a href="#">Termos de Uso</a>
+                        <a href="#">OAB/BA 123.456</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Menu mobile
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const area = document.getElementById('area').value;
+            const message = document.getElementById('message').value;
+
+            // Montar mensagem para WhatsApp
+            let whatsappMessage = `Olá! Gostaria de agendar uma consulta.%0A%0A`;
+            whatsappMessage += `*Nome:* ${name}%0A`;
+            whatsappMessage += `*Telefone:* ${phone}%0A`;
+
+            if (area) {
+                whatsappMessage += `*Área de Interesse:* ${document.getElementById('area').options[document.getElementById('area').selectedIndex].text}%0A`;
+            }
+
+            whatsappMessage += `*Mensagem:* ${message}`;
+
+            // Abrir WhatsApp
+            window.open(`https://wa.me/5571992832116?text=${whatsappMessage}`, '_blank');
+        });
+    </script>
+</body>
+
+</html>

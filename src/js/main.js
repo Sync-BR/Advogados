@@ -4,40 +4,30 @@ document.addEventListener('DOMContentLoaded', function () {
     contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // Coletar dados do formulário
         const formData = new FormData(contactForm);
         const name = formData.get('name');
         const email = formData.get('email');
         const phone = formData.get('phone');
         const message = formData.get('message');
 
-        // Validar telefone (remover caracteres não numéricos)
         const cleanPhone = phone.replace(/\D/g, '');
 
-        // Montar mensagem para WhatsApp
-        const whatsappMessage = `Olá! Gostaria de agendar uma consulta.\n\n*Dados do Cliente:*\n*Nome:* ${name}\n*E-mail:* ${email}\n*Telefone:* ${phone}\n\n*Mensagem:*\n${message}`;
+        const whatsappMessage = `*Dados do Cliente:*\n*Nome:* ${name}\n*E-mail:* ${email}\n*Telefone:* ${phone}\n\n*Mensagem:*\n${message}`;
 
-        // Codificar mensagem para URL
         const encodedMessage = encodeURIComponent(whatsappMessage);
 
-        // Número do WhatsApp (substitua pelo número real)
-        const whatsappNumber = '557183579082'; // Formato: 55 + DDD + número
+        const whatsappNumber = '557192832116'; 
 
-        // Criar URL do WhatsApp
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-        // Abrir WhatsApp
         window.open(whatsappURL, '_blank');
 
-        // Opcional: Limpar formulário após envio
         contactForm.reset();
 
-        // Opcional: Mostrar mensagem de confirmação
         showConfirmationMessage();
     });
 
     function showConfirmationMessage() {
-        // Criar elemento de confirmação
         const confirmation = document.createElement('div');
         confirmation.style.cssText = `
             position: fixed;
@@ -60,13 +50,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         document.body.appendChild(confirmation);
 
-        // Remover após 3 segundos
         setTimeout(() => {
             confirmation.remove();
         }, 3000);
     }
 
-    // Máscara para telefone
     const phoneInput = document.getElementById('phone');
     if (phoneInput) {
         phoneInput.addEventListener('input', function (e) {
@@ -88,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Adicionar estilos de animação
     const style = document.createElement('style');
     style.textContent = `
         @keyframes slideIn {
@@ -105,7 +92,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.head.appendChild(style);
 });
 
-// Menu Hamburguer
         const hamburger = document.querySelector(".hamburger");
         const navMenu = document.querySelector(".nav-menu");
 
@@ -113,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
             hamburger.classList.toggle("active");
             navMenu.classList.toggle("active");
 
-            // Alternar ícone do hamburguer
+
             const icon = hamburger.querySelector('i');
             if (navMenu.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
@@ -124,18 +110,16 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Fechar menu ao clicar em um link
+
         document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
             hamburger.classList.remove("active");
             navMenu.classList.remove("active");
 
-            // Restaurar ícone do hamburguer
             const icon = hamburger.querySelector('i');
             icon.classList.remove('fa-times');
             icon.classList.add('fa-bars');
         }));
 
-        // Smooth scroll para âncoras
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();

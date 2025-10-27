@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Advocacia Moderna — Proteção Jurídica com Excelência</title>
+  <meta name="description"
+    content="Escritório de advocacia moderno com foco em direito civil, trabalhista e empresarial. Atendimento personalizado e estratégias jurídicas eficazes." />
+    <link rel="shortcut icon" href="./src/img/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #94a3b8;
+      --accent1: #6c5ce7;
+      --accent2: #00c6ff;
+      --accent3: #ff6b6b;
+      --glass: rgba(255, 255, 255, 0.06);
+      --radius: 16px;
+      --maxw: 1200px;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: #e6eef8;
+      background: linear-gradient(180deg, #071024 0%, #071b2b 40%, #071b2b 100%);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      position: sticky;
+      top: 12px;
+      z-index: 100;
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+      padding: 14px 24px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(6px);
+      transition: var(--transition);
+    }
+
+    .nav.scrolled {
+      padding: 10px 24px;
+      box-shadow: 0 8px 30px rgba(2, 6, 23, 0.8);
+    }
+
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .logo {
+      background-image: url(./src/img/icon.png);
+      background-size: cover;
+      background-position: center;
+      width: 68px;
+      height: 68px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      color: white;
+      box-shadow: 0 6px 20px rgba(12, 18, 36, 0.6);
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      transition: var(--transition);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a.cta {
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      color: white;
+      padding: 10px 20px;
+      border-radius: 999px;
+      box-shadow: 0 8px 30px rgba(76, 58, 255, 0.15);
+      transition: var(--transition);
+    }
+
+    nav a.cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(76, 58, 255, 0.25);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(108, 92, 231, 0.2) 0%, rgba(0, 198, 255, 0.1) 70%, transparent 100%);
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      margin: 0;
+      line-height: 1.1;
+      background: linear-gradient(90deg, #ffffff, #dbe9ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      position: relative;
+      max-width: 800px;
+    }
+
+
+
+    .hero p {
+      color: var(--muted);
+      margin-top: 24px;
+      font-size: 1.1rem;
+      max-width: 700px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 16px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border-radius: 12px;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      color: white;
+      box-shadow: 0 8px 20px rgba(76, 58, 255, 0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(76, 58, 255, 0.3);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--card), rgba(7, 11, 20, 0.85));
+      border-radius: var(--radius);
+      padding: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(2, 6, 23, 0.8);
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 18px;
+    }
+
+    label {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    input,
+    textarea {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 12px 16px;
+      border-radius: 10px;
+      color: #dbeafe;
+      outline: none;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: rgba(108, 92, 231, 0.5);
+      box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.1);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #dbe9ff;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      border-radius: 2px;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    .grid-services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .service {
+      padding: 24px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(108, 92, 231, 0.05), rgba(0, 198, 255, 0.05));
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+      border-color: rgba(108, 92, 231, 0.2);
+    }
+
+    .service:hover::before {
+      opacity: 1;
+    }
+
+    .service-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .service h4 {
+      margin: 0 0 12px 0;
+      font-size: 1.2rem;
+      position: relative;
+    }
+
+    .service p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      position: relative;
+    }
+
+    #depoimentos {
+      margin-top: 80px;
+      position: relative;
+    }
+
+    #depoimentos::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(255, 107, 107, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial {
+      background: var(--glass);
+      padding: 24px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--accent1), var(--accent2));
+    }
+
+    .testimonial:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(2, 6, 23, 0.4);
+    }
+
+    .testi-top {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, var(--accent2), var(--accent1));
+      display: grid;
+      place-items: center;
+      color: #04111a;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .name {
+      font-weight: 700;
+    }
+
+    .role {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .text {
+      margin-top: 10px;
+      color: #e6eef8;
+      font-style: italic;
+      position: relative;
+    }
+
+    .testi-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .like {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.02);
+      cursor: pointer;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.02);
+      transition: var(--transition);
+      font-size: 14px;
+    }
+
+    .like:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .like.liked {
+      color: var(--accent3);
+    }
+
+    .add-form {
+      margin-top: 28px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .add-form input,
+    .add-form textarea {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    #contato {
+      margin-top: 80px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding: 40px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-logo {
+      font-weight: 800;
+      color: #dbe9ff;
+      font-size: 1.5rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 1000px) {
+
+      .testimonials,
+      .grid-services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        display: none;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .testimonials,
+      .grid-services {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="nav" id="navbar">
+        <div class="brand">
+          <a href="#hero">
+
+            <div class="logo"></div>
+          </a>
+          <div>
+            <div style="font-weight:800;color:#dbe9ff">Advocacia Valderson Mendes</div>
+            <div style="font-size:12px;color:var(--muted)">Agende sua Consulta</div>
+          </div>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="mainNav">
+          <a href="#servicos">Serviços</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#contato">Contato</a>
+          <a class="cta" href="#contato">Agendar Consulta</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <h1>Seu direito valorizado, sua confiança protegida</h1>
+        <p>Atendimento humanizado, ética e resultados reais. Assessoria jurídica especializada em Direito do Consumidor,
+          Previdenciário e Penal — presencial e online.</p>
+
+        <div class="actions">
+          <button class="btn btn-primary"
+            onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
+            <i class="fas fa-calendar-check"></i> Agende uma consulta
+          </button>
+          <button class="btn btn-ghost"
+            onclick="document.getElementById('servicos').scrollIntoView({behavior:'smooth'})">
+            <i class="fas fa-gavel"></i> Conheça nossos serviços
+          </button>
+        </div>
+      </section>
+
+      <section id="servicos" style="margin-top: 60px;">
+        <h2 class="section-title">Nossas Especialidades</h2>
+        <p class="section-subtitle">Atuamos com excelência nas principais áreas do Direito, oferecendo soluções
+          jurídicas personalizadas para cada caso.</p>
+
+        <div class="grid-services">
+          <div class="service">
+            <div class="service-icon">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <h4>Direito do Consumidor</h4>
+            <p>
+              Defendemos seus direitos como consumidor com eficiência e transparência. Atuamos em casos de cobranças
+              indevidas, juros abusivos, produtos com defeito, contratos irregulares e problemas bancários. Garantimos a
+              restituição de valores e a reparação de danos, buscando sempre o melhor resultado para você.
+            </p>
+          </div>
+          <div class="service">
+            <div class="service-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h4>Direito Previdenciário</h4>
+            <p>
+              Precisa de ajuda com aposentadoria, revisão ou benefício negado? Cuidamos de todo o processo para que você
+              receba o que tem direito com tranquilidade e confiança.
+            </p>
+
+          </div>
+          <div class="service">
+            <div class="service-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <h4>Direito Penal</h4>
+            <p>
+              Seja em casos de investigação, acusação ou prisão, oferecemos defesa penal estratégica e humanizada para
+              proteger seus direitos e minimizar impactos em sua vida.
+            </p>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="depoimentos">
+        <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+        <p class="section-subtitle">Avaliações reais de quem já confiou em nossos serviços jurídicos.</p>
+
+        <div id="testimonials" class="testimonials"></div>
+
+
+      </section>
+
+      <section id="contato">
+        <h2 class="section-title">Entre em Contato</h2>
+        <p class="section-subtitle">Estamos prontos para oferecer a melhor solução jurídica para o seu caso.</p>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h4>Escritório Central</h4>
+                <p>Alto do Cabrito, 87A<br>Salvador - BA, 40484-550</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h4>Telefone</h4>
+                <p>(71) 98357-9082 (WhatsApp)</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4>E-mail</h4>
+                <p>eduardofreitasfr@gmail.com<br>eduardofreitasfr@hotmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <h4>Horário de Atendimento</h4>
+                <p>Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h (com agendamento)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-bottom: 8px;">Agende uma Consulta</h3>
+            <p style="color:var(--muted);margin-bottom:20px">Preencha o formulário e retornaremos para agendar o melhor
+              horário.</p>
+            <form id="appointmentForm">
+              <div class="field">
+                <label for="a-name">Nome Completo</label>
+                <input id="a-name" required placeholder="Seu nome completo" />
+              </div>
+              <div class="field">
+                <label for="a-email">E-mail</label>
+                <input id="a-email" type="email" required placeholder="seu@exemplo.com" />
+              </div>
+              <div class="field">
+                <label for="a-phone">Telefone</label>
+                <input id="a-phone" required placeholder="(xx) xxxxx-xxxx" />
+              </div>
+              <div class="field">
+                <label for="a-msg">Detalhes do Caso</label>
+                <textarea id="a-msg" rows="4" placeholder="Descreva brevemente seu caso..."></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit" style="width: 100%;" onclick="openWhatsApp()">
+                <i class="fas fa-calendar-plus"></i> Solicitar Agendamento
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-content">
+          <div>
+            <div class="footer-logo">Valderson Mendes Advocacia</div>
+            <div style="font-size:14px;color:var(--muted);margin-top:8px">Excelência jurídica com atendimento humanizado
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <a href="#servicos">Serviços</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#contato">Contato</a>
+          </div>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="copyright">
+          © <span id="year"></span> Dr. Mendes - Todos os direitos reservados.
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'adv_testimonials_v2';
+    const testimonialsEl = document.getElementById('testimonials');
+    const seed = [
+      { id: 1, name: 'Mariana S.', role: 'Cliente', text: 'O Dr. Valderson Mendes é extremamente profissional. Seu atendimento impecável trouxe confiança e solução rápida ao meu caso. Recomendo de olhos fechados!', likes: 44 },
+      { id: 2, name: 'Carlos M.', role: 'Empresário', text: 'Competência e dedicação do Dr. Valderson Mendes fizeram toda a diferença. Ele salvou meu negócio com estratégias precisas e resultados concretos.', likes: 39 },
+      { id: 3, name: 'Ana P.', role: 'Cliente', text: 'Fui muito bem atendida pelo Dr. Valderson Mendes. Explicações claras, atenção aos detalhes e resultados acima das expectativas.', likes: 28 },
+      { id: 4, name: 'Roberto L.', role: 'Empresário', text: 'Dr. Valderson Mendes possui visão estratégica e alto conhecimento jurídico. Consultoria de alto nível, solucionando questões complexas com maestria.', likes: 33 },
+      { id: 5, name: 'Fernanda R.', role: 'Cliente', text: 'Atendimento humanizado e excelência técnica. O Dr. Valderson Mendes explicou cada passo e garantiu que eu me sentisse seguro durante todo o processo.', likes: 40 },
+      { id: 6, name: 'Paulo C.', role: 'Empreendedor', text: 'Profissionalismo e dedicação excepcionais. Dr. Valderson Mendes solucionou meu caso trabalhista com eficiência e atenção total aos detalhes.', likes: 20 }
+    ];
+
+    function loadTestimonials() {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(seed));
+        return seed.slice();
+      }
+      try {
+        return JSON.parse(raw);
+      } catch (e) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(seed));
+        return seed.slice();
+      }
+    }
+
+    function saveTestimonials(list) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+    }
+
+    function renderTestimonials() {
+      const list = loadTestimonials();
+      testimonialsEl.innerHTML = '';
+      list.forEach(t => {
+        const div = document.createElement('div');
+        div.className = 'testimonial';
+        div.innerHTML = `
+          <div>
+            <div class="testi-top">
+              <div class="avatar">${(t.name || 'U').slice(0, 1)}</div>
+              <div>
+                <div class="name">${escapeHtml(t.name)}</div>
+                <div class="role">${escapeHtml(t.role || 'Cliente')}</div>
+              </div>
+            </div>
+            <div class="text">"${escapeHtml(t.text)}"</div>
+          </div>
+          <div class="testi-footer">
+            <div style="font-size:12px;color:var(--muted)">${formatDate(t.date)}</div>
+            <div>
+              <button class="like ${t.liked ? 'liked' : ''}" data-id="${t.id}">
+                <i class="fas fa-heart"></i> <span class="count">${t.likes || 0}</span>
+              </button>
+            </div>
+          </div>
+        `;
+        testimonialsEl.appendChild(div);
+      });
+    }
+
+    function formatDate(dateString) {
+      if (!dateString) return 'Data não informada';
+
+      const date = new Date(dateString);
+      if (isNaN(date.getTime())) return 'Data inválida';
+
+      return date.toLocaleDateString('pt-BR');
+    }
+
+    function escapeHtml(s) {
+      return String(s).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+    }
+
+    testimonialsEl.addEventListener('click', e => {
+      const btn = e.target.closest('.like');
+      if (!btn) return;
+
+      const id = Number(btn.getAttribute('data-id'));
+      let list = loadTestimonials();
+
+      const userLikes = JSON.parse(localStorage.getItem('user_likes') || '{}');
+
+      if (userLikes[id]) {
+        alert('Você já curtiu este depoimento!');
+        return;
+      }
+
+      list = list.map(x => x.id === id ? { ...x, likes: (x.likes || 0) + 1, liked: true } : x);
+
+      userLikes[id] = true;
+      localStorage.setItem('user_likes', JSON.stringify(userLikes));
+
+      saveTestimonials(list);
+      renderTestimonials();
+    });
+
+
+
+
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      const nav = document.getElementById('mainNav');
+      nav.classList.toggle('active');
+
+      const icon = document.querySelector('#mobileMenuBtn i');
+      if (nav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    renderTestimonials();
+  </script>
+
+
+  <script>
+    document.getElementById('appointmentForm').addEventListener('submit', e => {
+      e.preventDefault();
+
+      const name = document.getElementById('a-name').value.trim();
+      const email = document.getElementById('a-email').value.trim();
+      const phone = document.getElementById('a-phone').value.trim();
+      const msg = document.getElementById('a-msg').value.trim();
+
+      if (!name || !email || !phone || !msg) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+      }
+
+      const whatsappNumber = '+557183579082'; 
+      const text = `Olá, gostaria de agendar uma consulta.\n\n*Nome:* ${name}\n*Email:* ${email}\n*Telefone:* ${phone}\n*Detalhes do Caso:* ${msg}`;
+      const url = `https://wa.me/${whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(text)}`;
+
+      window.open(url, '_blank');
+
+      document.getElementById('a-name').value = '';
+      document.getElementById('a-email').value = '';
+      document.getElementById('a-phone').value = '';
+      document.getElementById('a-msg').value = '';
+    });
+  </script>
+
+
+</body>
+
+</html>

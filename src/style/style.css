@@ -87,22 +87,33 @@
 
  /* Seção Banner Principal */
  .container-slider {
-     background-image: linear-gradient(rgba(7, 37, 65, 0.7), rgba(7, 37, 65, 0.7)), url(./../img/martelo-e-balanca-da-justica-na-sala-tribunal.png);
-     background-size: contain;
-     background-position: center;
-     background-attachment: fixed;
-     height: 100vh;
-     min-height: 600px;
      display: flex;
      flex-direction: column;
      justify-content: center;
      align-items: center;
      text-align: center;
+     height: 40vh;
      gap: 25px;
      color: white;
-     padding: 20px;
-     margin-top: 80px;
+     padding: 0 0 120px 0;
+     margin-top: 120px;
  }
+
+ .container-slider-photo{
+     background-image: url(./../img/logo\ fundo.png);
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center center;
+     background-attachment: scroll;
+     padding:160px;
+ }
+
+
+ /* .container-slider-banner{
+        
+        width: 50%;
+        height: auto;
+ } */
 
  .container-slider h1 {
      font-size: 3.5rem;

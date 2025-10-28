@@ -1118,6 +1118,10 @@
  }
 
  @media (max-width: 480px) {
+     .container-slider{
+        height: 100vh;
+        margin-top: 80px;
+     }
      .container-slider h1 {
          font-size: 2.2rem;
      }
@@ -1170,4 +1174,5 @@
      .form-group textarea {
          padding: 12px;
      }
- }
+ 
+}

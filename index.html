@@ -7,16 +7,25 @@
     <title>Seu direito protegido, sua vida amparada</title>
     <link rel="icon" type="image/x-icon" href="./src/img/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./src/style/reset.css">
     <link rel="stylesheet" href="./src/style/style.css">
 </head>
 
 <body>
-    <header>
+    <header class="site-header">
         <nav class="navbar">
-            <a href="#container-slider" class="logo">
-                <img src="./src/img/icon.png" alt="Advocacia Expert - Logo">
+            <a href="#container-slider" class="logo" aria-label="Valderson Mendes Advocacia - Início">
+                <span class="logo-mark">
+                    <img src="./src/img/icon.png" alt="">
+                </span>
+
+                <span class="logo-copy">
+                    <strong>Valderson Mendes</strong>
+                    <small>Advocacia</small>
+                </span>
             </a>
+
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="#container-slider" class="nav-link">Início</a>
@@ -28,95 +37,397 @@
                     <a href="#diferenciais" class="nav-link">Diferenciais</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#sobre" class="nav-link">Sobre Nós</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contactForm" class="nav-link">Contato</a>
+                    <a href="#sobre" class="nav-link">Sobre</a>
                 </li>
             </ul>
-            <button class="hamburger" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
+
+            <div class="nav-actions">
+                <a href="#avaliacao-juridica" class="nav-cta">
+                    <span>Falar com advogado</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main>
+
         <section id="container-slider" class="container-slider" aria-label="Banner principal">
-            <!--            
-            <h1>Seu direito protegido, <br> sua vida amparada</h1>
-            <p>Atuamos em Direito do Consumidor, Previdenciário e Penal com atenção, estratégia e resultados.</p> -->
-            <div class="container-slider-photo"></div>
-            <button><a href="#contactForm">Fale com um advogado</a></button>
-        </section>
 
-        <section id="areas-atuacao" class="container-performance" aria-label="Áreas de atuação">
-            <h2>Áreas de atuação</h2>
-            <div class="performance-area">
-                <div class="area">
-                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-cart-shopping"></i></div>
-                    <h3>Direito do Consumidor</h3>
-                    <ul>
-                        <li class="list-area"><strong>Cobranças indevidas</strong> – Revisamos sua fatura, contestamos a
-                            cobrança e
-                            garantimos restituição.</li>
-                        <li class="list-area"><strong>Juros abusivos</strong> – Identificamos taxas ilegais e
-                            renegociamos dívidas.</li>
-                        <li class="list-area"><strong>Produtos com defeito / garantia não cumprida</strong> – Garantimos
-                            troca, reparo ou
-                            indenização.</li>
-                        <li class="list-area"><strong>Publicidade enganosa</strong> – Corrigimos problemas de ofertas
-                            falsas ou
-                            enganosas.</li>
-                        <li class="list-area"><strong>Veículo apreendido</strong> – Veículo apreendido por
-                            falta de pagamento.</li>
-                        <li class="list-area"><strong>Recuperaçãos de veículo</strong> – Existem soluções jurídicas e
-                            legais para recuperar seu veículo.</li>
-                        <li class="list-area"><strong>Voo cancelado ou atrasado</strong> – Você pode ter direito a
-                            indenização e reembolso</li>
-                    </ul>
-                    <button><a href="#contactForm">Fale com um especialista agora</a></button>
+            <div class="hero-container">
+                <!-- CONTEÚDO -->
+                <div class="hero-content">
+
+                    <div class="container-slider-photo"></div>
+
+                    <!-- <h1>
+                        Defesa jurídica
+                        para proteger seus
+                        <strong>direitos.</strong>
+                    </h1> -->
+
+                    <p class="hero-description">
+                        Atendimento jurídico estratégico, humanizado e transparente
+                        nas áreas de Direito do Consumidor, Previdenciário e Penal.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a href="#avaliacao-juridica" class="hero-btn-primary">
+                            Solicitar atendimento
+
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a href="#areas-atuacao" class="hero-btn-outline">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            Áreas de atuação
+                        </a>
+
+                    </div>
+
+                    <div class="hero-benefits">
+
+                        <div class="hero-benefit">
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                Atendimento personalizado
+                            </span>
+                        </div>
+
+                        <div class="hero-benefit">
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                Estratégia jurídica individual
+                            </span>
+                        </div>
+
+                        <div class="hero-benefit">
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                Atendimento confidencial
+                            </span>
+                        </div>
+
+                    </div>
+
                 </div>
-                <div class="area">
-                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></div>
-                    <h3>Direito Previdenciário</h3>
-                    <ul>
-                        <li class="list-area"><strong>Aposentadoria por tempo de contribuição / idade /
-                                especial</strong> – Orientamos
-                            para garantir o benefício correto.
-                        </li>
-                        <li class="list-area"><strong>Revisão de benefícios</strong> – Corrigimos erros e aumentamos
-                            valores do
-                            benefício.</li>
-                        <li class="list-area"><strong>Auxílio-doença / auxílio-acidente</strong> – Garantimos renda
-                            durante afastamento.
-                        </li>
-                        <li class="list-area"><strong>Pensão por morte / benefícios familiares</strong> – Protegemos
-                            direitos de
-                            dependentes e herdeiros.</li>
-                    </ul>
-                    <button><a href="#contactForm">Fale com um especialista agora</a></button>
+
+
+                <!-- FOTO -->
+                <div class="hero-visual">
+
+                    <div class="hero-photo">
+
+                        <img src="./src/img/perfil-hero.jpg" alt="Advogado do escritório Valderson Mendes Advocacia">
+
+                    </div>
+
+
+                    <!-- CARD 01 -->
+
+                    <div class="hero-floating-card hero-card-one">
+
+                        <div class="hero-card-icon">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Defesa estratégica
+                            </strong>
+
+                            <small>
+                                Soluções jurídicas para o seu caso
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD 02 -->
+
+                    <div class="hero-floating-card hero-card-two">
+
+                        <div class="hero-card-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Atendimento seguro
+                            </strong>
+
+                            <small>
+                                Ética e confidencialidade
+                            </small>
+                        </div>
+
+                    </div>
+
                 </div>
-                <div class="area">
-                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>Direito Penal</h3>
-                    <ul>
-                        <li class="list-area"><strong>Defesa criminal</strong> – Atuamos da investigação ao julgamento,
-                            garantindo
-                            estratégias jurídicas eficazes.</li>
-                        <li class="list-area"><strong>Medidas cautelares e liberdade provisória</strong> – Minimização
-                            de impactos
-                            durante o processo.</li>
-                        <li class="list-area"><strong>Crimes contra patrimônio, consumo e violência</strong> – Defesa
-                            personalizada,
-                            buscando absolvição ou redução de penas.</li>
-                        <li class="list-area"><strong>Crimes cibernéticos</strong> – Defesa em fraudes online, golpes e
-                            invasões.</li>
-                    </ul>
-                    <button><a href="#contactForm">Fale com um especialista agora</a></button>
-                </div>
+
             </div>
-        </section>
 
+        </section>
+        <section id="areas-atuacao" class="container-performance" aria-labelledby="areas-title">
+
+            <div class="performance-heading">
+                <span class="section-eyebrow">Especialidades jurídicas</span>
+
+                <h2 id="areas-title">Áreas de atuação</h2>
+
+                <p>
+                    Atuação estratégica e personalizada para proteger seus direitos
+                    em diferentes momentos da sua vida.
+                </p>
+            </div>
+
+            <div class="performance-area">
+
+                <!-- Consumidor -->
+                <article class="area">
+
+                    <div class="area-header">
+                        <div class="icon" aria-hidden="true">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+
+                        <div>
+                            <span class="area-label">Consumidor</span>
+                            <h3>Direito do Consumidor</h3>
+                        </div>
+                    </div>
+
+                    <p class="area-description">
+                        Proteção contra práticas abusivas, cobranças indevidas e
+                        problemas nas relações de consumo.
+                    </p>
+
+                    <ul class="area-services">
+
+                        <li>
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+                            <div>
+                                <strong>Cobranças indevidas</strong>
+                                <span>Contestação de cobranças e análise de restituição.</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+                            <div>
+                                <strong>Juros abusivos</strong>
+                                <span>Análise contratual e revisão de taxas.</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+                            <div>
+                                <strong>Produtos e garantias</strong>
+                                <span>Defesa em casos de defeito, troca ou indenização.</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+                            <div>
+                                <strong>Publicidade enganosa</strong>
+                                <span>Proteção contra ofertas e informações abusivas.</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+                            <div>
+                                <strong>Busca e apreensão de veículos</strong>
+                                <span>Orientação jurídica para defesa e recuperação do veículo.</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+                            <div>
+                                <strong>Problemas com voos</strong>
+                                <span>Análise de direitos em cancelamentos e atrasos.</span>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <a href="#avaliacao-juridica" class="area-cta">
+                        Falar com um especialista
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- Previdenciário -->
+                <article class="area">
+
+                    <div class="area-header">
+
+                        <div class="icon" aria-hidden="true">
+                            <i class="fa-solid fa-file-signature"></i>
+                        </div>
+
+                        <div>
+                            <span class="area-label">Previdenciário</span>
+                            <h3>Direito Previdenciário</h3>
+                        </div>
+
+                    </div>
+
+                    <p class="area-description">
+                        Orientação para requerimento, revisão e proteção de benefícios
+                        previdenciários.
+                    </p>
+
+                    <ul class="area-services">
+
+                        <li>
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+
+                            <div>
+                                <strong>Aposentadorias</strong>
+                                <span>
+                                    Análise de aposentadoria por idade, contribuição ou atividade especial.
+                                </span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+
+                            <div>
+                                <strong>Revisão de benefícios</strong>
+                                <span>
+                                    Verificação de possíveis erros no cálculo do benefício.
+                                </span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+
+                            <div>
+                                <strong>Auxílio-doença e auxílio-acidente</strong>
+                                <span>
+                                    Orientação para proteção durante períodos de incapacidade.
+                                </span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+
+                            <div>
+                                <strong>Pensão por morte</strong>
+                                <span>
+                                    Defesa dos direitos previdenciários de dependentes.
+                                </span>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <a href="#avaliacao-juridica" class="area-cta">
+                        Falar com um especialista
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- Penal -->
+                <article class="area">
+
+                    <div class="area-header">
+
+                        <div class="icon" aria-hidden="true">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div>
+                            <span class="area-label">Criminal</span>
+                            <h3>Direito Penal</h3>
+                        </div>
+
+                    </div>
+
+                    <p class="area-description">
+                        Defesa técnica e estratégica em todas as etapas do processo criminal.
+                    </p>
+
+                    <ul class="area-services">
+
+                        <li>
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+
+                            <div>
+                                <strong>Defesa criminal</strong>
+                                <span>
+                                    Atuação desde a investigação até o julgamento.
+                                </span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+
+                            <div>
+                                <strong>Liberdade provisória</strong>
+                                <span>
+                                    Atuação em medidas cautelares e pedidos de liberdade.
+                                </span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+
+                            <div>
+                                <strong>Crimes patrimoniais</strong>
+                                <span>
+                                    Defesa jurídica individualizada conforme o caso.
+                                </span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+
+                            <div>
+                                <strong>Crimes cibernéticos</strong>
+                                <span>
+                                    Defesa em casos envolvendo fraudes, golpes e ambiente digital.
+                                </span>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <a href="#avaliacao-juridica" class="area-cta">
+                        Falar com um especialista
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
         <section id="diferenciais" class="container-differential" aria-label="Diferenciais do escritório">
             <div class="differential-title">
                 <h2>Diferenciais do Escritório</h2>
@@ -133,7 +444,7 @@
         </section>
 
         <section id="sobre" class="container-contact" aria-label="Contato e sobre nós">
-            <div class="contact-testimony">
+            <!-- <div class="contact-testimony">
                 <div>
                     <div class="testimony-text">
                         <div class="testimony-photo">
@@ -173,84 +484,577 @@
                             trabalhamos para proteger seus direitos e garantir segurança e confiança em cada etapa do
                             processo.
                         </p>
-                        <button><a href="#contactForm">Fale com um especialista agora</a></button>
+                        <button><a href="#avaliacao-juridica">Fale com um especialista agora</a></button>
                     </div>
                 </div>
+            </div> -->
+<section id="sobre" class="about-section" aria-labelledby="sobre-title">
+
+    <div class="about-container">
+
+        <!-- CONTEÚDO -->
+        <div class="about-content">
+
+            <span class="section-eyebrow">
+                Sobre o escritório
+            </span>
+
+            <h2 id="sobre-title">
+                Advocacia próxima, estratégica e comprometida com cada cliente.
+            </h2>
+
+            <p class="about-description">
+                O Valderson Mendes Advocacia atua com ética, clareza e dedicação,
+                oferecendo soluções jurídicas personalizadas nas áreas de Direito do
+                Consumidor, Previdenciário e Penal.
+            </p>
+
+            <p class="about-description">
+                Cada atendimento é conduzido de forma individualizada, com orientação
+                objetiva e acompanhamento próximo em todas as etapas do processo.
+            </p>
+
+            <div class="about-highlights">
+
+                <div class="about-highlight">
+                    <div class="about-highlight-icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+
+                    <div>
+                        <strong>Atuação estratégica</strong>
+                        <span>
+                            Análise cuidadosa do caso e definição da melhor abordagem jurídica.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="about-highlight">
+                    <div class="about-highlight-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <div>
+                        <strong>Ética e segurança</strong>
+                        <span>
+                            Atendimento pautado em transparência, confiança e confidencialidade.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="about-highlight">
+                    <div class="about-highlight-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+
+                    <div>
+                        <strong>Atendimento próximo</strong>
+                        <span>
+                            Comunicação clara para que você compreenda cada etapa do processo.
+                        </span>
+                    </div>
+                </div>
+
             </div>
 
+            <a href="#avaliacao-juridica" class="about-cta">
+                Falar com um especialista
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- FOTO -->
+        <div class="about-visual">
+
+            <div class="about-photo">
+
+                <img
+                    src="./src/img/IMG_3872.jpg"
+                    alt="Advogado do escritório Valderson Mendes Advocacia"
+                >
+
+                <div class="about-photo-overlay"></div>
+
+                <div class="about-photo-caption">
+                    <small>Advocacia</small>
+                    <strong>Valderson Mendes</strong>
+                </div>
+
+            </div>
+
+            <div class="about-floating-card">
+
+                <span class="about-floating-icon">
+                    <i class="fa-solid fa-gavel"></i>
+                </span>
+
+                <div>
+                    <strong>Atuação personalizada</strong>
+                    <small>
+                        Cada caso recebe uma análise individual
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- DEPOIMENTOS -->
+
+    <div class="testimonials-wrapper">
+
+        <div class="testimonials-heading">
+
+            <span class="section-eyebrow">
+                Experiência dos clientes
+            </span>
+
+            <h3>
+                Confiança construída através de um atendimento próximo.
+            </h3>
+
+        </div>
+
+        <div class="testimonials-grid">
+
+            <article class="testimonial-card">
+
+                <div class="testimonial-top">
+
+                    <div class="testimonial-avatar photo-container"></div>
+
+                    <div>
+                        <strong>Cliente atendido</strong>
+
+                        <span>
+                            Direito do Consumidor
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="testimonial-stars" aria-label="5 estrelas">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p>
+                    “O Valderson Mendes Advocacia resolveu meu caso de cobrança
+                    indevida com rapidez, atenção e muita clareza durante todo o
+                    atendimento.”
+                </p>
+
+            </article>
+
+
+            <article class="testimonial-card">
+
+                <div class="testimonial-top">
+
+                    <div class="testimonial-avatar photo-container2"></div>
+
+                    <div>
+                        <strong>Cliente empresarial</strong>
+
+                        <span>
+                            Consultoria jurídica
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="testimonial-stars" aria-label="5 estrelas">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p>
+                    “O escritório foi essencial para nossa empresa, oferecendo
+                    orientação clara, eficiência e uma estratégia jurídica muito
+                    bem conduzida.”
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
         </section>
-        <section class="contact-form-section">
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h2>Entre em Contato</h2>
-                    <p>Estamos aqui para ajudar. Entre em contato conosco através do formulário ou pelos nossos canais
-                        diretos.</p>
 
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <i class="fab fa-whatsapp"></i>
-                            <div>
-                                <h3>WhatsApp</h3>
-                                <p>(71) 99283-2116</p>
-                                <a href="https://wa.me/5571992832116?text=Olá! Gostaria de agendar uma consulta."
-                                    class="whatsapp-link" target="_blank">
-                                    Enviar mensagem
-                                </a>
-                            </div>
-                        </div>
+        <section class="assessment" id="avaliacao-juridica">
 
-                        <div class="contact-method">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h3>E-mail</h3>
-                                <p>Advmendes.vm@gmail.com</p>
+            <div class="container">
+
+                <div class="assessment-grid">
+
+                    <!-- LADO ESQUERDO -->
+
+                    <div class="assessment-intro reveal">
+
+                        <span class="section-label">
+                            Atendimento inicial
+                        </span>
+
+                        <h2>
+                            Conte brevemente sobre o seu caso.
+                        </h2>
+
+                        <p>
+                            Preencha as informações abaixo para que possamos entender
+                            melhor sua situação e direcionar o atendimento jurídico
+                            de forma adequada.
+                        </p>
+
+                        <div class="assessment-info">
+
+                            <div class="assessment-info-item">
+                                <i class="bi bi-clock"></i>
+
+                                <div>
+                                    <strong>Rápido e objetivo</strong>
+                                    <span>Leva poucos minutos para preencher</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h3>Endereço</h3>
-                                <small> Rua ministro Antônio Carlos Magalhães - 1238 - Buraquinho
-                                    Lauro de Freitas, Salvador/BA<br>
-                                    CEP: 42710-400</small>
+
+                            <div class="assessment-info-item">
+                                <i class="bi bi-shield-check"></i>
+
+                                <div>
+                                    <strong>Atendimento confidencial</strong>
+                                    <span>Suas informações serão tratadas com discrição</span>
+                                </div>
                             </div>
+
+                            <div class="assessment-info-item">
+                                <i class="bi bi-whatsapp"></i>
+
+                                <div>
+                                    <strong>Contato facilitado</strong>
+                                    <span>Envie sua solicitação diretamente pelo WhatsApp</span>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
-                </div>
 
-                <div class="form-container">
-                    <form id="contactForm" class="contact-form">
-                        <h3>Fale com um especialista</h3>
 
-                        <div class="form-group">
-                            <label for="name">Nome Completo *</label>
-                            <input type="text" id="name" name="name" required>
+                    <!-- FORMULÁRIO -->
+
+                    <form class="assessment-form reveal" id="assessmentForm">
+
+                        <div class="form-header">
+
+                            <span>01</span>
+
+                            <div>
+                                <small>Seus dados</small>
+                                <h3>Informações para contato</h3>
+                            </div>
+
                         </div>
 
-                        <div class="form-group">
-                            <label for="email">E-mail *</label>
-                            <input type="email" id="email" name="email" required>
+
+                        <!-- NOME -->
+
+                        <div class="form-group form-full">
+
+                            <label for="nome">
+                                Nome completo
+                                <span>*</span>
+                            </label>
+
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo"
+                                autocomplete="name" required>
+
                         </div>
 
-                        <div class="form-group">
-                            <label for="phone">Telefone/WhatsApp *</label>
-                            <input type="tel" id="phone" name="phone" required>
+
+                        <div class="form-row">
+
+                            <!-- TELEFONE -->
+
+                            <div class="form-group">
+
+                                <label for="telefone">
+                                    Telefone / WhatsApp
+                                    <span>*</span>
+                                </label>
+
+                                <input type="tel" id="telefone" name="telefone" placeholder="(71) 99999-9999"
+                                    autocomplete="tel" required>
+
+                            </div>
+
+
+                            <!-- EMAIL -->
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    E-mail
+                                </label>
+
+                                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com"
+                                    autocomplete="email">
+
+                            </div>
+
                         </div>
 
-                        <div class="form-group">
-                            <label for="message">Assunto  *</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Descreva brevemente seu caso..."
-                                required></textarea>
+
+                        <!-- ÁREA JURÍDICA -->
+
+                        <div class="objective-section">
+
+                            <div class="objective-title">
+
+                                <span>02</span>
+
+                                <div>
+                                    <small>Área jurídica</small>
+                                    <h3>Como podemos ajudar?</h3>
+                                </div>
+
+                            </div>
+
+
+                            <div class="objective-options">
+
+                                <!-- CONSUMIDOR -->
+
+                                <label class="objective-card">
+
+                                    <input type="radio" name="area_juridica" value="Direito do Consumidor" required>
+
+                                    <span class="objective-content">
+
+                                        <span class="objective-icon">
+                                            <i class="bi bi-bag-check"></i>
+                                        </span>
+
+                                        <span class="objective-text">
+
+                                            <strong>Direito do Consumidor</strong>
+
+                                            <small>
+                                                Cobranças, contratos, produtos, serviços e relações de consumo
+                                            </small>
+
+                                        </span>
+
+                                        <span class="objective-check">
+                                            <i class="bi bi-check-lg"></i>
+                                        </span>
+
+                                    </span>
+
+                                </label>
+
+
+                                <!-- PREVIDENCIÁRIO -->
+
+                                <label class="objective-card">
+
+                                    <input type="radio" name="area_juridica" value="Direito Previdenciário">
+
+                                    <span class="objective-content">
+
+                                        <span class="objective-icon">
+                                            <i class="bi bi-file-earmark-text"></i>
+                                        </span>
+
+                                        <span class="objective-text">
+
+                                            <strong>Direito Previdenciário</strong>
+
+                                            <small>
+                                                Aposentadorias, benefícios, revisões e pensões
+                                            </small>
+
+                                        </span>
+
+                                        <span class="objective-check">
+                                            <i class="bi bi-check-lg"></i>
+                                        </span>
+
+                                    </span>
+
+                                </label>
+
+
+                                <!-- PENAL -->
+
+                                <label class="objective-card">
+
+                                    <input type="radio" name="area_juridica" value="Direito Penal">
+
+                                    <span class="objective-content">
+
+                                        <span class="objective-icon">
+                                            <i class="bi bi-shield-lock"></i>
+                                        </span>
+
+                                        <span class="objective-text">
+
+                                            <strong>Direito Penal</strong>
+
+                                            <small>
+                                                Defesa criminal, investigação e medidas urgentes
+                                            </small>
+
+                                        </span>
+
+                                        <span class="objective-check">
+                                            <i class="bi bi-check-lg"></i>
+                                        </span>
+
+                                    </span>
+
+                                </label>
+
+
+                                <!-- OUTROS -->
+
+                                <label class="objective-card">
+
+                                    <input type="radio" name="area_juridica" value="Outros assuntos">
+
+                                    <span class="objective-content">
+
+                                        <span class="objective-icon">
+                                            <i class="bi bi-chat-square-text"></i>
+                                        </span>
+
+                                        <span class="objective-text">
+
+                                            <strong>Outro assunto</strong>
+
+                                            <small>
+                                                Não encontrou sua situação entre as opções acima
+                                            </small>
+
+                                        </span>
+
+                                        <span class="objective-check">
+                                            <i class="bi bi-check-lg"></i>
+                                        </span>
+
+                                    </span>
+
+                                </label>
+
+                            </div>
+
                         </div>
 
-                        <button type="submit" class="submit-btn">
-                            <i class="fab fa-whatsapp"></i>
-                            Enviar pelo WhatsApp
+
+                        <!-- DESCRIÇÃO DO CASO -->
+
+                        <div class="objective-section">
+
+                            <div class="objective-title">
+
+                                <span>03</span>
+
+                                <div>
+                                    <small>Sobre o caso</small>
+                                    <h3>Descreva brevemente sua situação</h3>
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group form-full">
+
+                                <label for="descricao">
+                                    Como podemos ajudar?
+                                    <span>*</span>
+                                </label>
+
+                                <textarea id="descricao" name="descricao" rows="5" maxlength="1000"
+                                    placeholder="Conte brevemente o que aconteceu e qual orientação você está buscando."
+                                    required></textarea>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- URGÊNCIA -->
+
+                        <div class="form-group form-full">
+
+                            <label for="urgencia">
+                                Existe alguma urgência ou prazo próximo?
+                            </label>
+
+                            <select id="urgencia" name="urgencia">
+
+                                <option value="">
+                                    Selecione uma opção
+                                </option>
+
+                                <option value="Não">
+                                    Não
+                                </option>
+
+                                <option value="Sim, nos próximos dias">
+                                    Sim, nos próximos dias
+                                </option>
+
+                                <option value="Sim, hoje">
+                                    Sim, preciso de orientação hoje
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- BOTÃO -->
+
+                        <button type="submit" class="assessment-submit">
+
+                            <span>
+                                Solicitar atendimento
+                            </span>
+
+                            <i class="bi bi-arrow-right"></i>
+
                         </button>
+
+
+                        <!-- PRIVACIDADE -->
+
+                        <p class="form-privacy">
+
+                            <i class="bi bi-shield-check"></i>
+
+                            Seus dados serão utilizados exclusivamente para
+                            análise inicial e contato relacionado ao atendimento jurídico.
+
+                        </p>
+
                     </form>
+
                 </div>
+
             </div>
+
         </section>
     </main>
 
@@ -270,8 +1074,8 @@
                             aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://www.facebook.com/people/DrMendes/61576057498157"
-                            class="social-link" aria-label="Facebook" target="_blank">
+                        <a href="https://www.facebook.com/people/DrMendes/61576057498157" class="social-link"
+                            aria-label="Facebook" target="_blank">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/valderson-mendes-977653383/?trk=contact-info"
@@ -291,7 +1095,7 @@
                         <li><a href="./specialization.html">áreas de especialização</a></li>
                         <li><a href="./index.html#diferenciais">Diferenciais</a></li>
                         <li><a href="./index.html#sobre">Sobre Nós</a></li>
-                        <li><a href="./index.html#contactForm">Contato</a></li>
+                        <li><a href="./index.html#avaliacao-juridica">Contato</a></li>
                         <li><a href="#" class="whatsapp-link">WhatsApp Direto</a></li>
                     </ul>
                 </div>
@@ -352,7 +1156,7 @@
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
                     <div class="copyright">
-                        <p>&copy; 2025 Valderson Mendes Advocacia. Todos os direitos reservados.</p>
+                        <p>&copy; 2026 Valderson Mendes Advocacia. Todos os direitos reservados.</p>
                     </div>
                     <div class="footer-legal">
                         <a href="#">Política de Privacidade</a>

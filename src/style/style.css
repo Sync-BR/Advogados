@@ -2970,7 +2970,7 @@ footer {
     }
 
     .hero-card-one {
-        top: 80px;
+        top: 20px;
         left: -4px;
     }
 
@@ -5274,7 +5274,7 @@ section {
     }
 
     .hero-badge-top {
-        top: 34px;
+        /* top: 14px; */
         left: -4px;
     }
 
